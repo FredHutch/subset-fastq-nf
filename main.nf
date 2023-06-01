@@ -30,7 +30,7 @@ process subset_fastq {
     script:
     nlines = params.nreads * 4
     """#!/bin/bash
-set -euo pipefail
+set -eu
 
 echo "Processing ${fastq}"
 echo "Keeping ${params.nreads} - ${nlines} lines"
