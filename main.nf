@@ -46,12 +46,12 @@ read_fastq(){
 
 # Read the FASTQ, take the first nlines, and write to TEMP
 if [[ "${fastq}" == *.gz ]]; then
-    subset \
+    read_fastq \
         | head -${nlines} \
         | gzip -c \
         > TEMP
 else
-    subset \
+    read_fastq \
         | head -${nlines} \
         > TEMP
 fi
