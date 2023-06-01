@@ -21,6 +21,7 @@ def helpMessage() {
 
 process subset_fastq {
     container "ubuntu:21.04"
+    publishDir params.outdir, mode: 'copy', overwrite: true
     input:
         path fastq
 
